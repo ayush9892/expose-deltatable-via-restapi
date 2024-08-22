@@ -30,5 +30,6 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
     end_time = time.perf_counter()
     execution_time = end_time - start_time
+    # Check
 
     return func.HttpResponse(str(execution_time) + "/n" + f"{results}")
