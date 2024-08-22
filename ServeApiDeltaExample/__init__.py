@@ -20,7 +20,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     sql_query = req.params.get('sql_query')
 
     storage_options={'tenant_id': TENANT_ID, 'client_id': CLIENT_ID, 'client_secret': CLIENT_SECRET }
-    dt = DeltaTable("abfss://presentation@synapselearningadls.dfs.core.windows.net/<<delta folder name>>", storage_options=storage_options)
+    dt = DeltaTable("abfss://presentation@synapselearningadls.dfs.core.windows.net/pharmacy_usa/us_cities_presc", storage_options=storage_options)
     parquet_read_options = {
         'coerce_int96_timestamp_unit': 'ms',  # Coerce int96 timestamps to a particular unit
     }
